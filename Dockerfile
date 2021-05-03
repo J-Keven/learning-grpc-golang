@@ -6,10 +6,9 @@ RUN apk add bash
 
 WORKDIR /usr/app
 
-
 COPY . .
 
-CMD [ "tail", "-f", "/dev/null" ]
+ENTRYPOINT [ "go", "run", "./cmd/server/server.go" ]
 
 
 
